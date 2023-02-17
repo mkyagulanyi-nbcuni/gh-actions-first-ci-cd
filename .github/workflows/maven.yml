@@ -18,6 +18,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Clean up runner
+      run: rm -rf /home/runner/.m2/
     - name: Download code from repo
       uses: actions/checkout@v3
     - name: Set up JDK 8
